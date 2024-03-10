@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { auth, handleUserProfile } from './firebase/utils';
 
 
@@ -66,7 +66,7 @@ class App extends Component {
             </MainLayout>
           )} />
           <Route path="/login" 
-            render={() => currentUser ? <Redirect to="/" />: (
+            render={() => currentUser ? window.location.href = "/": (
               <MainLayout currentUser={currentUser}>
                 <Login />
               </MainLayout>
