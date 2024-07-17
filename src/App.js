@@ -60,7 +60,7 @@ class App extends Component {
               <Homepage />
             </HomepageLayout>
           )} />
-          <Route path="/registration" render={() => (
+          <Route path="/registration" render={() => currentUser ? window.location.href = "/":(
             <MainLayout currentUser={currentUser}>
               <Registration />
             </MainLayout>
